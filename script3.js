@@ -9,10 +9,24 @@ function arr(n, queries) {
     let result = [];
     let addNumber = 0;
 
-    for (let i = 0; i < queries.length; i++) {
-        console.log(queries[i]);
-        const firstEleme
+    for (let index = 1; index <= n; index++) {
+        result.push(0)
+        
     }
+    console.log(result);
+
+    for (let i = 0; i < queries.length; i++) {
+        const element = queries[i][0];
+        const element1 = queries[i][1];
+        const element2 = queries[i][2];
+
+        for (let index = element; index <= element1; index++) {
+            result[index - 1] += element2;
+        }
+
+            // console.log(element,element1, element2);
+    }
+    console.log(result);
 }
 
 arr(n, queries)
